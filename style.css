@@ -1,131 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, html { height: 100%; width: 100%; overflow: hidden; font-family: 'Poppins', sans-serif; color: #fff; }
 
-body, html {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  font-family: 'Poppins', sans-serif;
-  color: #fff;
-}
-
-/* Arka Plan Video Stili */
-.bg-img {
+/* Videoyu sabitle */
+#bgVideo {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
+  right: 0; bottom: 0; min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
   object-fit: cover;
-  z-index: -2;
-  filter: brightness(0.8);
+  filter: brightness(0.6);
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%);
-  z-index: -1;
-}
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: -99; }
 
-/* Konteyner & Kart Düzeni */
-.container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.profile-card {
-  text-align: center;
-  width: 100%;
-  max-width: 360px;
-  background: rgba(18, 18, 22, 0.55);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 35px 25px;
-  border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-}
-
-/* Profil Video Stili */
-.avatar-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-
-.profile-img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
-  transition: transform 0.4s ease, border-color 0.4s ease;
-}
-
-.profile-card:hover .profile-img {
-  transform: scale(1.04);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-/* İsim & Biyografi */
-.cool-title {
-  font-family: 'Cinzel', serif;
-  font-size: 2.2rem;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
-  color: #ffffff;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-}
-
-.bio {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: #b3b3b3;
-  margin-bottom: 30px;
-  font-weight: 300;
-  padding: 0 10px;
-}
-
-/* Bağlantı Butonları */
-.links-container {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.link-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px;
-  background: rgba(255, 255, 255, 0.04);
-  color: #f0f0f0;
-  text-decoration: none;
-  border-radius: 14px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.link-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
+.container { height: 100vh; display: flex; justify-content: center; align-items: center; padding: 20px; }
+.profile-card { text-align: center; width: 100%; max-width: 360px; background: rgba(18, 18, 22, 0.7); backdrop-filter: blur(15px); padding: 35px 25px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); }
+.avatar-wrapper { margin-bottom: 18px; }
+.profile-img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; }
+.cool-title { font-family: 'Cinzel', serif; font-size: 2rem; margin-bottom: 10px; }
+.bio { font-size: 0.85rem; color: #ccc; margin-bottom: 25px; }
+.link-btn { display: block; padding: 12px; background: rgba(255,255,255,0.1); color: #fff; text-decoration: none; border-radius: 10px; margin-bottom: 10px; transition: 0.3s; }
+.link-btn:hover { background: rgba(255,255,255,0.2); }
